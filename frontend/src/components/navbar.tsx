@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 import { MenuIcon, XIcon } from "lucide-react";
-import React, { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 // This is a simple navbar component that will be used in the app
 
@@ -13,8 +13,8 @@ const navbarItems = [
 ];
 
 function Navbar() {
-  const [isScrolled, setIsScrolled] = React.useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -69,7 +69,10 @@ function Navbar() {
 
         {/* Mobile Navigation */}
 
-        <button className="md:hidden z-41 cursor-pointer"  onClick={() => setIsMobileMenuOpen((prev) => !prev)}>
+        <button
+          className="md:hidden z-41 cursor-pointer"
+          onClick={() => setIsMobileMenuOpen((prev) => !prev)}
+        >
           {isMobileMenuOpen ? <XIcon size={24} /> : <MenuIcon />}
         </button>
 

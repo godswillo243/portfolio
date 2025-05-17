@@ -1,5 +1,4 @@
 import { BriefcaseBusinessIcon, CodeIcon, UserIcon } from "lucide-react";
-import React from "react";
 
 function About() {
   return (
@@ -74,7 +73,8 @@ function About() {
                 <div className="text-left">
                   <h4 className="text-lg font-semibold">Project Management</h4>
                   <p className="text-muted-foreground">
-                    Leading projects from conceptions to completion with agile methodologies
+                    Leading projects from conceptions to completion with agile
+                    methodologies
                   </p>
                 </div>
               </div>
